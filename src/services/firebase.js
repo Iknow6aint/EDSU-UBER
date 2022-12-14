@@ -68,10 +68,13 @@ export const registerWithEmailAndPassword = async (name, email, password) => {
 
 
 
-//signInWithGoogle
+//signInWithEmail
 export const signInWithEmailAndPassword = async (email, password) => {
     try {
-        await auth.signInWithEmailAndPassword(email, password);
+        await auth.signInWithEmailAndPassword(email, password)
+            .then((response) => {
+                sessionStorage.setItem('Auth Token', response._tokenResponse.refreshToken)
+            })
     } catch (err) {
         alert(err.message);
     }
