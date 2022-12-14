@@ -13,7 +13,7 @@ const Lists = ({ places }) => {
 
     return (
         <div className={classes.container}>
-            <Typography variant='h4'>Resturants, Hotels & Attractions around You</Typography>
+            <Typography variant='h4'>SELECT RIDE</Typography>
             <FormControl className={classes.formControl}>
                 <InputLabel>Type</InputLabel>
                 <Select value={type} onChange={(e) => setTypes(e.target.value)}>
